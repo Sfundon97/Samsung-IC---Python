@@ -1,5 +1,4 @@
 merger_count = 0
-merger_count1 = 0
 #Swapping Algorithm
 
 def swap1(S, x, y):
@@ -90,11 +89,13 @@ print(merger_count)
 
 #Bubble Sort
 def bubble_sort(items):
-    global merger_count1
-    merger_count1 += 1
+    global merger_count
+    
     m = len(items)
     for i in range(m):
+        merger_count += 1 
         print(items)
+       
         for j in range(m -1):
             if items[j] > items[j + 1]:
                 items[j], items[j + 1] = items[j + 1], items[j]
