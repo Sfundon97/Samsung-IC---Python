@@ -104,3 +104,30 @@ mergList2 = [27, 10, 12, 20, 25, 13, 15, 22]
 mergesort1(mergList2)
 print(mergList2)
 print(merger_count)
+
+#Quicksort
+def quicksort(items, low, high):
+    if low < high:
+        print(items)
+        pivotpoint = partition1(items, low, high)
+        quicksort(items, low, pivotpoint - 1)
+        quicksort(items, pivotpoint + 1, high)
+
+def partition1(items, low, high):
+    pivot = items[low]
+    left, right = low + 1, high
+    while left < right:
+        print(items)
+        while left <= right and items[left] <= pivot:
+            left += 1
+        while left < right and items[right] >= pivot:
+            right -= 1
+        if left < right:
+            items[left], items[right] = items[right], items[left]
+    pivotpoint = right
+    items[low], items[pivotpoint] = items[pivotpoint], items[low]
+    return pivotpoint
+
+quickList3 = [27, 10, 12, 20, 25, 13, 15, 22]
+quicksort(quickList3, 0, len(quickList3) - 1)
+print(quickList3)
