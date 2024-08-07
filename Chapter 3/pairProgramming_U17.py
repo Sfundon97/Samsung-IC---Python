@@ -37,13 +37,3 @@ for celcius in range(10, 60, 10):
     print(f"{celcius} degrees Celcius = {faher} degrees Fahrenheit")
 
 
-#Recursive Function
-#Q1
-def number(n):
-    n = int(input('Enter a number '))
-    sum1 = 0
-    for i in range(1, n+1):
-        sum1 = sum1 + i
-        print(sum1)
-
-number(0)
